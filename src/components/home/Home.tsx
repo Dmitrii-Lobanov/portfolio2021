@@ -1,9 +1,13 @@
 import About from './About';
+import Achievements from './Achievements';
+import Mission from './Mission';
 
-function Home () {
+const Home: React.FC = (): JSX.Element => {
   return (
     <>
       <About />
+      <Mission />
+      <Achievements />
     </>
   )
 }

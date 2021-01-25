@@ -1,20 +1,20 @@
-import photo from '../../assets/home.jpg';
-import { Data, achievements } from "../../assets/data";
+import { skills, Data } from "../../assets/data";
+import icon from '../../assets/skills.svg';
 
-const prefix = 'about';
+const prefix = 'top-skills';
 
 const About: React.FC = (): JSX.Element => {
   return (
     <div className={`${prefix}-container`}>
       <div className={`${prefix}-text`}>
-        <h1>Dmitrii Lobanov</h1>
+        <h1>Skills</h1>
         {
-          achievements.map((achievement: Data): JSX.Element => <h2 key={achievement.title}>{achievement?.title}</h2>)
+          skills.map((skill: Data): JSX.Element => <h2 key={skill.title}>{skill?.title}</h2>)
         }
       </div>
       <div className={`${prefix}-img`}>
         <div className={`${prefix}-img-container`}>
-          <img src={photo} alt="This is how I look like"/>
+          <img src={icon} alt=""/>
         </div>
       </div>
     </div>

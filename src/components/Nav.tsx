@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const prefix = 'nav';
 
-function Nav () {
+const Nav: React.FC = (): JSX.Element => {
   return (
     <div className={`${prefix}-container`}>
-      <Link to='/' className={`${prefix}-logo`}>{`<DL />`}</Link>
+      <NavLink to='/' className={`${prefix}-logo`}>{`<DL />`}</NavLink>
       <span className={`${prefix}-items`}>
-        <Link to='/' className={`${prefix}-tab`}>Home</Link>
-        <Link to='/portfolio' className={`${prefix}-tab`}>Portfolio</Link>
-        <Link to='/skills' className={`${prefix}-tab`}>Skills</Link>
-        <Link to='/contacts' className={`${prefix}-tab`}>Contacts</Link>
+        <NavLink to='/' className={`${prefix}-tab`} activeClassName={`${prefix}-active`}>Home</NavLink>
+        <NavLink to='/portfolio' className={`${prefix}-tab`} activeClassName={`${prefix}-active`}>Portfolio</NavLink>
+        <NavLink to='/skills' className={`${prefix}-tab`} activeClassName={`${prefix}-active`}>Skills</NavLink>
+        <NavLink to='blog' className={`${prefix}-tab`} activeClassName={`${prefix}-active`}>Blog</NavLink>
+        <NavLink to='/contacts' className={`${prefix}-tab`} activeClassName={`${prefix}-active`}>Contacts</NavLink>
       </span>
     </div>
   )
