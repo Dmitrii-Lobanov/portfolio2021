@@ -23,6 +23,8 @@ export interface Project {
   img: string;
   shortDesc: string;
   description: string;
+  repo: string;
+  demo: string;
 }
 
 export interface Phone extends Icon {
@@ -51,6 +53,13 @@ export interface Article {
   path: string;
   description: string;
   tags: string[];
+}
+
+export interface Accomplishment {
+  title: string;
+  school: string;
+  schoolUrl?: string;
+  credential?: string;
 }
 
 export const achievements: Data[] = [
@@ -86,7 +95,12 @@ export const skills: Data[] = [
     title: 'Redux State Management',
     description: '',
     icon: ''
-  }
+  },
+  {
+    title: 'C1 English',
+    description: '',
+    icon: ''
+  },
 ];
 
 export const projects: Project[] = [
@@ -94,37 +108,49 @@ export const projects: Project[] = [
     title: 'Recipe Search',
     img: project1,
     shortDesc: 'In this app you can choose your favourite recipe and get info about it',
-    description: ''
+    description: '',
+    repo: 'https://github.com/Dmitrii-Lobanov/Recipe-App',
+    demo: 'https://dmitrii-lobanov-recipeapp.netlify.app/'
   },
   {
     title: 'Todo List',
     img: project2,
     shortDesc: 'In this app you can create, edit and delete your own todo list',
-    description: ''
+    description: '',
+    repo: 'https://github.com/Dmitrii-Lobanov/todo-list',
+    demo: 'https://dmitrii-lobanov-todolist.netlify.app/'
   },
   {
     title: 'Author Quiz',
     img: project3,
     shortDesc: 'In this app you need to choose the book written by the author shown on the picture',
-    description: ''
+    description: '',
+    repo: 'https://github.com/Dmitrii-Lobanov/Author-Quiz',
+    demo: 'https://dmitrii-lobanov-authorquiz.netlify.app/'
   },
   {
     title: 'Video Games Sales Visualisation',
     img: project4,
     shortDesc: 'This app is created using D3.js and visualizes data',
-    description: ''
+    description: '',
+    repo: 'https://codepen.io/Dmitrii-Lobanov/pen/zgvEyM',
+    demo: 'https://codepen.io/Dmitrii-Lobanov/pen/zgvEyM'
   },
   {
     title: 'Calculator',
     img: project5,
     shortDesc: 'A simple calculator created using React',
-    description: ''
+    description: '',
+    repo: 'https://codepen.io/Dmitrii-Lobanov/pen/ymBVEm',
+    demo: 'https://codepen.io/Dmitrii-Lobanov/pen/ymBVEm'
   },
   {
     title: 'Markdown Previewer',
     img: project6,
     shortDesc: 'An app that transform markdown to text created using React',
-    description: ''
+    description: '',
+    repo: 'https://codepen.io/Dmitrii-Lobanov/pen/MNggxw',
+    demo: 'https://codepen.io/Dmitrii-Lobanov/pen/MNggxw'
   }
 ];
 
@@ -174,3 +200,72 @@ export const blog: Article[] = [
     tags: ['JavaScript', 'Frontend', 'WebDev']
   }
 ]
+
+export const accomplishments: Accomplishment[] = [
+  {
+    title: 'JavaScript Algorithms and Data Structures',
+    school: 'Udemy',
+    schoolUrl: 'https://www.udemy.com/',
+    credential: 'https://www.udemy.com/certificate/UC-97f31ead-0ad3-4627-80c2-b0710b31b670/'
+  },
+  {
+    title: 'Advanced React and Redux',
+    school: 'Udemy',
+    schoolUrl: 'https://www.udemy.com/',
+    credential: 'https://www.udemy.com/certificate/UC-caf55023-5aff-4513-9ce6-285c8597fac6/'
+  },
+  {
+    title: 'Modern React with Redux',
+    school: 'Udemy',
+    schoolUrl: 'https://www.udemy.com/',
+    credential: 'https://www.udemy.com/certificate/UC-5ee72c2b-f2ae-4266-9c1f-d231dd423658/'
+  },
+  {
+    title: 'Full Stack',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/full-stack'
+  },
+  {
+    title: 'Information Security and Quality Assurance',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/information-security-and-quality-assurance'
+  },
+  {
+    title: 'Responsive Web Design',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/responsive-web-design'
+  },
+  {
+    title: 'JavaScript Algorithms and Data Structures',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/javascript-algorithms-and-data-structures'
+  },
+  {
+    title: 'Front End Libraries',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/front-end-libraries'
+  },
+  {
+    title: 'Data Visualization',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/data-visualization'
+  },
+  {
+    title: 'APIs and Microservices',
+    school: 'FreeCodeCamp',
+    schoolUrl: 'https://www.freecodecamp.org/',
+    credential: 'https://freecodecamp.org/certification/dmitrii-lobanov/apis-and-microservices'
+  },
+  {
+    title: 'English (credential ID: 17RU006648LOBD069A)',
+    school: 'IELTS',
+    schoolUrl: 'https://www.ielts.com/',
+    credential: 'https://ielts.ucles.org.uk/ielts-trf/'
+  }
+];

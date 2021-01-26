@@ -17,11 +17,17 @@ const Projects: React.FC = (): JSX.Element => {
         <Slider className={`${prefix}-slider`}>
           {
             projects.map((project: Project, index: number) => (
+              <>
               <Slide index={index}>
                 <h1>{project?.title}</h1>
                 <h2>{project?.shortDesc}</h2>
+                <div className={`${prefix}-link`}>
+                  <a href={project.repo} target="_blank" rel='noreferrer'>Github or Codepen repo</a>
+                  <a href={project.demo} target="_blank" rel='noreferrer'>Demo</a>
+                </div>
                 <Image src={project?.img} alt="" hasMasterSpinner={true} className={`${prefix}-img`} />
               </Slide>
+              </>
             ))
           }
         </Slider>
