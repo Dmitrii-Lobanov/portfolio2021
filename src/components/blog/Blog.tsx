@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { Article, blog } from "../../assets/data";
 import { Link, useRouteMatch } from 'react-router-dom';
 import Top from './Top';
@@ -6,24 +5,24 @@ import Top from './Top';
 const prefix = 'blog';
 
 const Blog: React.FC = ():JSX.Element => {
-  const [text, setText] = useState<string>('');
-
-  useEffect(() => {
-    fetch(blog[0].file).then(res => res.text()).then(data => { setText(data) });
-
-  }, []);
-
-  const { path, url } = useRouteMatch();
+  const { url } = useRouteMatch();
   
   return (
     <>
     <Top />
     <div className={prefix}>
       {blog.map((article: Article): JSX.Element => (
-        <div className={`${prefix}-item`}>
+        <div className={`${prefix}-item`} key={article.path}>
           <h1>{article.title}</h1>
-          <div>{article.description}</div>
-          <Link to={`${url}/${article.path}`}>Read</Link>
+          <div className={`${prefix}-tags`}>
+            {
+              article.tags.map((tag: string, index: number): JSX.Element => (
+                <span className={`${prefix}-tag`} key={index}>{ tag }</span>
+              ))
+            }
+          </div>
+          <div className={`${prefix}-description`}>{article.description}</div>
+          <Link to={`${url}/${article.path}`} className={`${prefix}-link`}>Read</Link>
         </div>
       ))}
     </div>

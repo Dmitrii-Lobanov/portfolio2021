@@ -263,7 +263,37 @@
   font-size: 200%;
   padding: 100px 20% 20px 20%;
   text-align: justify;
-  & pre {
-    // background-color: @quaternary-color;
+  & h1 {
+    text-align: center;
+  }
+  &-item {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 100px;
+    border-bottom: 3px solid lightgrey;
+    & h1 {
+      color: @basic-color;
+      margin-bottom: 20px;
+    }
+  }
+  &-tags {
+    margin-bottom: 20px;
+  }
+  &-tag {
+    padding: 10px;
+    border: 1px solid @secondary-color;
+    border-radius: 5px;
+    font-size: 24px;
+    margin-right: 20px;
+  }
+  &-link {
+    padding: 5px 60px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    background-color: @tertiary-color;
+  }
+  &-description {
+    margin-bottom: 50px;
   }
 }

@@ -50,6 +50,7 @@ export interface Article {
   file: string;
   path: string;
   description: string;
+  tags: string[];
 }
 
 export const achievements: Data[] = [
@@ -155,13 +156,21 @@ export const blog: Article[] = [
     title: 'Generators',
     file: 'generators',
     path: 'generators',
-    description: `Regular functions return only one, single value (or nothing).
-    Generators can return (“ **yield** ”) multiple values, one after another, on-demand. They work great with [iterables](https://javascript.info/iterable), allowing to create data streams with ease`
+    description: 'Basic approach to generators in Javascript',
+    tags: ['JavaScript', 'Frontend', 'WebDev']
   },
   {
     title: 'Canvas',
     file: 'canvas',
     path: 'canvas',
-    description: 'Some tasks, such as drawing a line between arbitrary points, are extremely awkward to do with regular HTML elements.'
+    description: 'Review of canvas element of HTML and how to use it in Javascript',
+    tags: ['JavaScript', 'Frontend', 'WebDev']
+  },
+  {
+    title: 'Promises',
+    file: 'promises',
+    path: 'promises',
+    description: 'Short but yet eloquent article on promises and asynchronous actions in Javascript',
+    tags: ['JavaScript', 'Frontend', 'WebDev']
   }
 ]

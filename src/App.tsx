@@ -1,4 +1,4 @@
-import { Switch, Route, BrowserRouter as Router, useRouteMatch } from "react-router-dom";
+import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import './App.less';
 import Article from './components/blog/Article';
 import Blog from './components/blog/Blog';
@@ -10,7 +10,7 @@ import Portfolio from './components/portfolio/Portfolio';
 import Skills from './components/skills/Skills';
 
 const App: React.FC = (): JSX.Element => {
-  
+
   return (
     <div className="App">
       <Router>
@@ -32,7 +32,7 @@ const App: React.FC = (): JSX.Element => {
             <Blog />
           </Route>
           <Route path="/blog/:topicId">
-            <Article article="canvas" />
+            <Article />
           </Route>
         </Switch>
         <Footer />
