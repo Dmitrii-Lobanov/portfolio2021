@@ -25,7 +25,7 @@ const Article: React.FC = ():JSX.Element => {
 
   return (
     <div>
-      <ReactMarkdown source={text} plugins={[ gfm ]} className='blog' renderers={renderers} />
+      <ReactMarkdown source={text} plugins={[ gfm ]} className='article' renderers={renderers} />
     </div>
   )
 }
