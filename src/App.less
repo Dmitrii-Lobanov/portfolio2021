@@ -55,10 +55,13 @@
 
 .about, .top-skills, .top-portfolio, .top-contacts {
   &-container {
-    margin-top: 80px;
+    padding-top: 80px;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-bottom: 100px;
+    grid-template-columns: 1fr 2fr;
+    padding-bottom: 100px;
+    position: relative;
+    left: 10%;
+    top: 18%;
   }
   &-img {
     &-container {
@@ -77,31 +80,20 @@
   }
   &-text {
     & h1, h2 {
-      font-size: 300%;
-      position: relative;
-      left: 10%;
-      top: 18%;
+      font-size: 250%;
       color: @secondary-color;
     }
     & h1 {
-      font-size: 600%;
+      font-size: 500%;
       color: @basic-color;
-    }
-  }
-}
-
-.about {
-  &-img {
-    &-container {
-      margin-top: 100px;
     }
   }
 }
 
 .mission {
   &-container {
-    height: 500px;
     background-color: @quaternary-color;
+    padding-bottom: 100px;
   }
   &-content {
     width: 70%;
@@ -110,8 +102,7 @@
     text-align: center;
     position: relative;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%);
     line-height: 2;
     color: white;
     & strong {
@@ -157,11 +148,11 @@
     color: @basic-color;
     font-size: 36px;
     font-weight: 600;
-    border-bottom: 3px solid @basic-color;
   }
   &-description {
     font-size: 30px;
     line-height: 2;
+    padding-top: 30px;
   }
 }
 
@@ -179,7 +170,7 @@
     transform: translate(-50%);
   }
   &-slider {
-    width: 1200px;
+    width: 80%;
     height: 850px;
     position: relative;
     left: 50%;
@@ -207,7 +198,8 @@
   &-link {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
     & a {
       font-size: 36px;
       color: @secondary-color;
@@ -347,9 +339,9 @@
     margin-bottom: 100px;
   }
   &-item {
-    justify-self: center;
     width: 80%;
     padding-bottom: 80px;
+    justify-self: center;
     &:not(:last-child) {
       border-bottom: 3px solid lightgrey;
     }
@@ -372,16 +364,17 @@
     }
   }
   &-credential {
-    padding: 15px 60px;
+    padding: 15px 20px;
     text-decoration: none;
     color: white;
     border-radius: 5px;
     background-color: @tertiary-color;
     font-size: 24px;
+    font-weight: bold;
+    display: block;
+    margin: 0 auto;
     text-align: center;
-    position: relative;
-    left: 40%;
-    transform: translate(-40%);
+    width: 250px;
     &:hover {
       color: @tertiary-color;
       background-color: white;
@@ -390,14 +383,52 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 868px) {
+  .nav {
+    &-items {
+      grid-template-columns: repeat(5, min-content);
+      gap: 20px;
+    }
+  }
+
+  .about, .top-skills, .top-portfolio, .top-contacts {
+    &-container {
+      max-width: 90vw;
+      overflow-x: hidden;
+      margin-top: 0px;
+    }
+    &-img {
+      &-container {
+        width: 400px;
+        height: 400px;
+      }
+    }
+    &-text {
+      & h1, h2 {
+        font-size: 200%;
+      }
+      & h1 {
+        font-size: 400%;
+      }
+    }
+  }
+
   .skills {
     &-item {
+      & h1 {
+        font-size: 36px;
+      }
+    }
+  }
+  
+  .projects {
+    &-slider {
+      height: 700px;
     }
   }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
   .nav {
     &-container {
       height: 40px;
@@ -423,7 +454,8 @@
 
   .about, .top-skills, .top-portfolio, .top-contacts {
     &-container {
-      overflow: hidden;
+      max-width: 90vw;
+      overflow-x: hidden;
       margin-top: 0px;
     }
     &-img {
@@ -444,9 +476,9 @@
     &-item {
       font-size: 24px;
       justify-self: start;
-      margin-left: 10px;
+      margin-left: 20px;
       & h1 {
-        font-size: 36px;
+        font-size: 30px;
         word-wrap: break-word;
       }
       & div {
@@ -492,7 +524,8 @@
       font-size: 36px;
       line-height: 1.5;
       width: 90%;
-      top: 40%;
+      padding-top: 50px;
+      padding-bottom: 0px;
     }
   }
 
