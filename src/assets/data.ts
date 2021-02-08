@@ -203,6 +203,12 @@ export const blog: Article[] = [
 
 export const accomplishments: Accomplishment[] = [
   {
+    title: 'JavaScript: The Advanced Concepts',
+    school: 'Udemy',
+    schoolUrl: 'https://www.udemy.com/',
+    credential: 'https://www.udemy.com/certificate/UC-a1598345-3779-4b07-9e90-1dd56a342ec0/'
+  },
+  {
     title: 'JavaScript Algorithms and Data Structures',
     school: 'Udemy',
     schoolUrl: 'https://www.udemy.com/',
