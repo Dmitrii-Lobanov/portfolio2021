@@ -1,3 +1,4 @@
+import React from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext, Image } from 'pure-react-carousel';
 import { FaBackward, FaForward } from "react-icons/fa";
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -17,7 +18,7 @@ const Projects: React.FC = (): JSX.Element => {
         <Slider className={`${prefix}-slider`}>
           {
             projects.map((project: Project, index: number) => (
-              <>
+              <React.Fragment key={project.title}>
               <Slide index={index}>
                 <h1>{project?.title}</h1>
                 <h2>{project?.shortDesc}</h2>
@@ -27,7 +28,7 @@ const Projects: React.FC = (): JSX.Element => {
                 </div>
                 <Image src={project?.img} alt="" hasMasterSpinner={true} className={`${prefix}-img`} />
               </Slide>
-              </>
+              </React.Fragment>
             ))
           }
         </Slider>
