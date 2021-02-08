@@ -1,4 +1,4 @@
-import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
+import { Switch, Route, HashRouter as Router } from "react-router-dom";
 import './App.less';
 import Article from './components/blog/Article';
 import Blog from './components/blog/Blog';
