@@ -14,7 +14,7 @@ const Article: React.FC = ():JSX.Element => {
   
   useEffect(() => {
     async function getFile() {
-      const file = await import(`../../assets${window.location.pathname}.md`);
+      const file = await import(`../../assets${window.location.hash.slice(1)}.md`);
       const response = await fetch(file.default);
       const data = await response.text();
       setText(data);
